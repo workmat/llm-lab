@@ -1,0 +1,28 @@
+model_list:
+
+  - model_name: nvidia-chat
+    litellm_params:
+      model: openai/qwen3:8b
+      api_base: http://192.168.2.10:11434/v1
+      api_key: ollama
+
+  - model_name: nvidia-code
+    litellm_params:
+      model: openai/qwen2.5-coder:7b
+      api_base: http://192.168.2.10:11434/v1
+      api_key: ollama
+
+  - model_name: intel-chat
+    litellm_params:
+      model: openai/qwen3-8b
+      api_base: http://192.168.2.20:8080/v1
+      api_key: dummy
+
+  - model_name: apple-chat
+    litellm_params:
+      model: openai/Qwen3-8B-4bit
+      api_base: http://192.168.2.30:8080/v1
+      api_key: dummy
+
+general_settings:
+  master_key: os.environ/LITELLM_MASTER_KEY
